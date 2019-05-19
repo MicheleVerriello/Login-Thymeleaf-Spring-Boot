@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: registrazione-db
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: miche
+Implementation-Vendor-Id: it.linksacademy
+Build-Jdk: 1.8.0_202
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/registrazione-db
+Created-By: Maven Integration for Eclipse
+

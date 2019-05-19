@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<style type="text/css">
+	
+		.persona{
+			border-color: 2px solid blue;
+			border-radius: 20px;
+			border-width: 5px;
+			background: white;
+			text-align: center;
+			padding: 40px;
+			margin-left: 200px;
+			margin-right: 200px;
+			margin-top: 60px;
+		}
+		
+		.bottoni{
+			align-content: left;
+		}
+		
+	</style>
+<title>Lista Utenti</title>
+</head>
+<body bgcolor="blue">
+	<h1 style="color: red; text-align: center;">Lista Utenti</h1>
+	<ul th:each = "utente : ${utenti}">
+		<li>
+			<div class="persona">
+			
+				<h4 style="color: blue;" th:text = "${utente.nome} + ' ' + ${utente.cognome}"></h4>
+				<br>
+				<div class="divs" style="color: blue;">Id <p th:text = "${utente.id_utente}"></p></div>
+				<br>
+				<div  style="color: blue;">Eta' <p th:text = "${utente.eta}"></p></div>
+				<br>
+				<div style="color: blue;">Email <p th:text = "${utente.email}"></p></div>
+				<br>
+				<div style="color: blue;">Password <p th:text = "${utente.password}"></p></div>
+				<br>
+				<div><a style="color: blue;" th:href="@{/utente/all/{id}(id=${utente.id_utente})}">Elimina</a></div>
+			</div>
+		</li>
+	</ul>
+	<br><br>
+	<a href="/utente/registration">Registra nuovo utente</a>
+</body>
+</html>

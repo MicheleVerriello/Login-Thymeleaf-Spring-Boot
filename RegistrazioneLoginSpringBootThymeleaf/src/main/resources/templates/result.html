@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registrazione completata</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body style="text-align: center;">
+	<h1 style="color: red;">Registrazione completata</h1>
+    <p th:text="'Ciao ' + ${utente.nome} + ' ora sei registrato nel database!'" />
+    <br><br><br>
+    <a href="/utente/registration">Registra nuovo utente</a><br>
+    <a href="/utente/all">Torna alla lista utenti</a>
+</body>
+</html>

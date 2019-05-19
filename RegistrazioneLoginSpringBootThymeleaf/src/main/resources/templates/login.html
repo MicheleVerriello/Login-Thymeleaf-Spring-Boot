@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Login</title>
+</head>
+<body style="text-align: center; padding: 50%;">
+	
+	<div style="text-align: center; color: red; padding: 30px;"><h1>Login</h1></div>
+	<br>
+	<br>
+	<br>
+	<form id="form" action="#" th:action="@{/utente/loginuser}" th:object="${emailPassword}" method="post">
+    	<input  type="email" id="email" placeholder="Email" th:field="*{email}" /><br>
+    	<input  type="password" id="password" placeholder="Password" th:field="*{password}" /><br>
+        <input  style="background-color: green;" type="submit" id="sign" value="Login" /><br>
+    </form>
+    
+</body>
+</html>
